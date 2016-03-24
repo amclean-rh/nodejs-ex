@@ -59,7 +59,7 @@ app.get('/', function (req, res) {
       res.render('index.html', { pageCountMessage : count, dbInfo: dbDetails });
     });
   } else {
-    res.render("Hello this is hostname " + process.env.HOSTNAME)
+    res.send("Hello this is hostname " + process.env.HOSTNAME)
   }
 });
 
